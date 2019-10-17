@@ -1,0 +1,11 @@
+<launch>
+<node pkg="example_pkg" type="reader" name="node1" required="true" output="screen">
+<param name="cost" type="int" value="1"/>
+</node>
+<node pkg="sample_pkg" type="reader" name="node2" output="screen">
+<remap from="input_aray" to="input_array"/>
+</node>
+<node pkg="example_pkg" type="reader" name="node3" output="screen">
+<param name="max_size" type="int" value="$(arg max_size)"/>
+</node>
+</launch>
